@@ -1,0 +1,12 @@
+{
+  "profil": {
+    "hakkimda": "Selam, ben Sohbets. Dijital dünyada oyun editleri yapıyor, Wattpad'de karanlık fantezi kurgular yazıyor ve kendimi yazılım alanında geliştiriyorum. Python macerası başladı, projelere odaklanma vakti!",
+    "yas": "16 (Öğrenci)",
+    "konum": "Aşkabat",
+    "ilgi": "Real Madrid, Spor, Kurgu Yazarlığı",
+    "hedef": "Sıfır asit & sadece su! + Yeni projelere odaklanmak."
+  },
+  "oyunlar": [
+    { "id": 1, "ad": "Minecraft Java", "http://games.unite-gaming.com/minecraft_installer.exe": "https://example.com" }
+  ]
+}
