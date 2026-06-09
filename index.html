@@ -3,481 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohbets's Hub</title>
+    <title>Coldxoz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans',sans-serif; }
 
         body {
-            background: linear-gradient(rgba(15, 17, 12, 0.85), rgba(12, 14, 10, 0.90)),
+            background: linear-gradient(rgba(15,17,12,0.88), rgba(10,12,8,0.93)),
                         url('foto/images.jfif') no-repeat center center fixed;
             background-size: cover;
             color: #f3f4f6;
-            padding: 40px 20px;
+            padding: 0 0 60px 0;
             display: flex;
             justify-content: center;
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
+        .container { max-width: 860px; width: 100%; padding: 0 20px; }
 
-        .modern-card {
-            background: rgba(20, 25, 15, 0.65);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(91, 135, 49, 0.25);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        .hero {
             position: relative;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #a3b899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #7cae49;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h2::before {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 20px;
-            background-color: #5b8731;
-            border-radius: 2px;
-        }
-
-        .profile-bio {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #d1d5db;
-            margin-bottom: 20px;
-            background: rgba(0,0,0,0.2);
-            padding: 15px;
-            border-left: 3px solid #5b8731;
-            border-radius: 4px 12px 12px 4px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 12px;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: #7cae49;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .stat-value {
-            font-size: 1.1rem;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px;
-            border-radius: 12px;
-            color: #ffffff;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .wattpad-link:hover { background: #ff500a; border-color: #ff763b; }
-        .youtube-link:hover { background: #FF0000; border-color: #ff4d4d; }
-        .tiktok-link:hover { background: #000000; border-color: #ff0050; }
-        .instagram-link:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: #dc2743; }
-
-        .skills-grid { display: grid; gap: 15px; }
-
-        .skill-item {
-            background: rgba(0,0,0,0.3);
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .skill-bar-bg {
-            width: 100%;
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
+            border-radius: 0 0 24px 24px;
             overflow: hidden;
         }
 
-        .skill-bar-fill {
-            height: 100%;
-            background: #7cae49;
-            border-radius: 4px;
-            transition: width 1s ease-in-out;
+        .hero-banner {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #0a120a 0%, #1a2e10 55%, #0f1a0a 100%);
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
 
-        .skill-python .skill-bar-fill { background: #3776ab; }
-        .skill-wattpad .skill-bar-fill { background: #ff500a; }
-        .skill-edit .skill-bar-fill { background: #a855f7; }
+        .hero-banner-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(10,14,8,0.7));
+        }
+
+        .hero-banner-pattern {
+            position: absolute; inset: 0;
+            background-image:
+                radial-gradient(circle at 15% 60%, rgba(91,135,49,0.2) 0%, transparent 45%),
+                radial-gradient(circle at 85% 25%, rgba(124,174,73,0.15) 0%, transparent 40%),
+                repeating-linear-gradient(45deg, transparent, transparent 28px, rgba(91,135,49,0.04) 28px, rgba(91,135,49,0.04) 29px);
+        }
+
+        .hero-glow {
+            position: absolute; top:-60px; left:-60px;
+            width:300px; height:300px;
+            background: radial-gradient(circle, rgba(91,135,49,0.2) 0%, transparent 65%);
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.1)} }
+
+        .hero-profile {
+            background: rgba(15,20,10,0.85);
+            backdrop-filter: blur(16px);
+            padding: 0 28px 24px 28px;
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .avatar-wrap {
+            position: relative;
+            margin-top: -44px;
+            flex-shrink: 0;
+        }
+
+        .avatar {
+            width: 88px; height: 88px;
+            border-radius: 50%;
+            border: 3px solid #5b8731;
+            background: linear-gradient(135deg,#1a2e10,#2d4a1a);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 0 22px rgba(91,135,49,0.5);
+            overflow: hidden;
+        }
+
+        .avatar img { width:100%; height:100%; object-fit:cover; }
+
+        .avatar-ring {
+            position: absolute; inset: -6px;
+            border-radius: 50%;
+            border: 2px solid rgba(91,135,49,0.4);
+            animation: ringPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes ringPulse { 0%,100%{transform:scale(1);opacity:0.5} 50%{transform:scale(1.06);opacity:1} }
+
+        .hero-text { flex: 1; padding-top: 14px; }
+
+        .hero-name {
+            font-size: 2rem; font-weight: 800;
+            background: linear-gradient(135deg,#fff 0%,#a3c47a 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero-handle { color:#7cae49; font-size:0.9rem; font-weight:600; margin:3px 0 10px; letter-spacing:1px; }
+
+        .hero-badges { display:flex; gap:6px; flex-wrap:wrap; }
+
+        .badge {
+            background:rgba(91,135,49,0.15); border:1px solid rgba(91,135,49,0.3);
+            color:#a3c47a; padding:3px 10px; border-radius:20px;
+            font-size:0.72rem; font-weight:700;
+        }
+
+        .subscribe-btn {
+            background:#FF0000; color:white; text-decoration:none;
+            padding:11px 20px; border-radius:10px;
+            font-weight:800; font-size:0.88rem; transition:all 0.3s;
+            white-space:nowrap; flex-shrink:0;
+            box-shadow:0 4px 18px rgba(255,0,0,0.3);
+            display:flex; align-items:center; gap:7px;
+            align-self: center;
+            margin-bottom: 4px;
+        }
+
+        .subscribe-btn:hover { background:#cc0000; transform:translateY(-2px); }
+
+        .modern-card {
+            background: rgba(20,25,15,0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(91,135,49,0.25);
+            border-radius: 16px;
+            padding: 26px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        .section-top { margin-top: 20px; }
+
+        h2 {
+            font-size:1.3rem; font-weight:700; margin-bottom:16px;
+            display:flex; align-items:center; gap:10px; color:#fff;
+        }
+
+        h2::before {
+            content:''; display:inline-block;
+            width:5px; height:17px; background:#5b8731; border-radius:2px;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+            gap: 14px;
+        }
+
+        .video-card {
+            background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.06);
+            border-radius:12px; overflow:hidden; transition:all 0.3s;
+            text-decoration:none; color:inherit; display:block;
+        }
+
+        .video-card:hover { transform:translateY(-4px); border-color:rgba(91,135,49,0.4); box-shadow:0 8px 24px rgba(0,0,0,0.5); }
+
+        .video-thumb { position:relative; width:100%; aspect-ratio:16/9; background:#111; overflow:hidden; }
+        .video-thumb img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
+        .video-card:hover .video-thumb img { transform:scale(1.05); }
+
+        .play-overlay {
+            position:absolute; inset:0; background:rgba(0,0,0,0.35);
+            display:flex; align-items:center; justify-content:center;
+            opacity:0; transition:opacity 0.3s;
+        }
+
+        .video-card:hover .play-overlay { opacity:1; }
+
+        .play-icon {
+            width:46px; height:46px; background:rgba(255,0,0,0.9);
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-size:1.1rem; color:#fff;
+        }
+
+        .video-info { padding:11px; }
+
+        .video-title {
+            font-size:0.88rem; font-weight:600; color:#f3f4f6; line-height:1.4; margin-bottom:5px;
+            display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+        }
+
+        .video-date { font-size:0.76rem; color:#6b7280; }
+
+        .yt-all-btn {
+            display:block; text-align:center; margin-top:14px;
+            color:#FF0000; font-weight:700; text-decoration:none; font-size:0.9rem;
+        }
+
+        .yt-all-btn:hover { opacity:0.75; }
+
+        .profile-bio {
+            font-size:1rem; line-height:1.7; color:#d1d5db; margin-bottom:18px;
+            background:rgba(0,0,0,0.2); padding:14px;
+            border-left:3px solid #5b8731; border-radius:4px 12px 12px 4px;
+        }
+
+        .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:11px; }
+
+        .stat-item { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:13px; border-radius:12px; }
+        .stat-label { font-size:0.72rem; color:#7cae49; text-transform:uppercase; letter-spacing:1px; font-weight:800; margin-bottom:4px; }
+        .stat-value { font-size:0.98rem; color:#fff; font-weight:600; }
+
+        .links-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; }
+
+        .social-link {
+            display:flex; align-items:center; justify-content:center;
+            background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);
+            padding:13px; border-radius:12px; color:#fff; font-weight:600;
+            text-decoration:none; transition:all 0.3s;
+        }
+
+        .social-link:hover { transform:translateY(-3px); }
+        .wattpad-link:hover  { background:#ff500a; border-color:#ff763b; }
+        .youtube-link:hover  { background:#FF0000; border-color:#ff4d4d; }
+        .tiktok-link:hover   { background:#000; border-color:#ff0050; }
+        .instagram-link:hover{ background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color:#dc2743; }
+
+        .skills-grid { display:grid; gap:11px; }
+        .skill-item { background:rgba(0,0,0,0.3); padding:13px; border-radius:10px; }
+        .skill-header { display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.88rem; font-weight:600; }
+        .skill-bar-bg { width:100%; height:7px; background:rgba(255,255,255,0.1); border-radius:4px; overflow:hidden; }
+        .skill-bar-fill { height:100%; background:#7cae49; border-radius:4px; }
+        .skill-python  .skill-bar-fill { background:#3776ab; }
+        .skill-wattpad .skill-bar-fill { background:#ff500a; }
+        .skill-edit    .skill-bar-fill { background:#a855f7; }
 
         .book-card {
-            background: rgba(255, 255, 255, 0.02);
-            border-left: 4px solid #ff500a;
-            padding: 20px;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 16px;
+            background:rgba(255,255,255,0.02); border-left:4px solid #ff500a;
+            padding:17px; border-radius:0 12px 12px 0; margin-bottom:12px;
         }
 
-        .book-title { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
-        .book-desc { color: #d1d5db; font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px; }
+        .book-title { font-size:1.08rem; font-weight:800; color:#fff; margin-bottom:6px; }
+        .book-desc  { color:#d1d5db; font-size:0.88rem; line-height:1.5; margin-bottom:10px; }
 
         .status-badge {
-            display: inline-block;
-            background: rgba(91, 135, 49, 0.2);
-            color: #7cae49;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .game-item {
-            background: rgba(255, 255, 255, 0.02);
-            border-left: 4px solid #5b8731;
-            padding: 20px;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display:inline-block; background:rgba(91,135,49,0.2); color:#7cae49;
+            padding:4px 12px; border-radius:20px; font-size:0.8rem; font-weight:600; margin-bottom:12px;
         }
 
         .search-box {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            background: rgba(20, 25, 15, 0.65);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(91, 135, 49, 0.25);
-            color: white;
-            border-radius: 12px;
-            font-size: 1rem;
-            outline: none;
-            transition: border 0.3s;
+            width:100%; padding:11px 15px; margin-bottom:13px;
+            background:rgba(20,25,15,0.7); backdrop-filter:blur(16px);
+            border:1px solid rgba(91,135,49,0.25); color:white;
+            border-radius:12px; font-size:0.93rem; outline:none; transition:border 0.3s;
         }
 
-        .search-box:focus { border-color: #7cae49; }
-        .search-box::placeholder { color: #6b7280; }
+        .search-box:focus { border-color:#7cae49; }
+        .search-box::placeholder { color:#6b7280; }
+
+        .game-item {
+            background:rgba(255,255,255,0.02); border-left:4px solid #5b8731;
+            padding:15px 18px; border-radius:0 12px 12px 0; margin-bottom:11px;
+            display:flex; justify-content:space-between; align-items:center;
+            gap: 12px;
+        }
+
+        .game-item h3 { font-size:0.98rem; font-weight:600; flex:1; }
 
         .download-btn, .read-btn {
-            background: #5b8731;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
+            background:#5b8731; color:white; text-decoration:none;
+            padding:8px 17px; border-radius:8px; font-weight:600; font-size:0.87rem;
+            transition:0.2s; border:none; cursor:pointer; display:inline-block;
+            white-space: nowrap;
         }
 
-        .read-btn { background: #ff500a; }
-        .download-btn:hover { background: #7cae49; }
-        .read-btn:hover { background: #ff763b; }
+        .read-btn { background:#ff500a; }
+        .download-btn:hover { background:#7cae49; }
+        .read-btn:hover     { background:#ff763b; }
 
-        /* YÜKLENİYOR ANIMASYONU */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #7cae49;
-            font-size: 0.95rem;
-            animation: pulse 1.2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
-        /* GÜNCELLEME NOTU */
-        .info-box {
-            background: rgba(91, 135, 49, 0.1);
-            border: 1px solid rgba(91, 135, 49, 0.3);
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin-bottom: 24px;
-            font-size: 0.9rem;
-            color: #a3d66e;
+        .info-msg {
+            color:#6b7280; font-size:0.88rem; padding:8px 0;
             line-height: 1.6;
         }
 
-        .info-box strong { color: #7cae49; }
+        footer { text-align:center; margin-top:30px; font-size:0.8rem; color:#4b5563; }
 
-        .admin-trigger {
-            position: absolute;
-            bottom: 10px;
-            right: 15px;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.07);
-            cursor: pointer;
-            user-select: none;
+        @media (max-width:600px) {
+            .hero-profile { flex-wrap:wrap; padding:0 18px 20px; }
+            .hero-name { font-size:1.6rem; }
+            .subscribe-btn { width:100%; justify-content:center; }
+            .videos-grid { grid-template-columns:1fr 1fr; }
+            .hero-banner { height:120px; }
         }
 
-        footer {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 0.85rem;
-            color: #6b7280;
+        @media (max-width:400px) {
+            .videos-grid { grid-template-columns:1fr; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-
-    <!-- PROFİL KARTI -->
-    <div class="modern-card">
-        <h1 style="text-align: center;">Sohbets</h1>
-        <p class="subtitle" style="text-align: center;">Kurgu Yazarı & Yazılımcı & Editör</p>
-
-        <div class="profile-bio" id="gorunenHakkimda">
-            <span class="loading">Yükleniyor...</span>
+    <div class="hero">
+        <div class="hero-banner" id="heroBanner">
+            <div class="hero-banner-pattern"></div>
+            <div class="hero-banner-overlay"></div>
+            <div class="hero-glow"></div>
         </div>
+        <div class="hero-profile">
+            <div class="avatar-wrap">
+                <div class="avatar" id="avatarEl">🎮</div>
+                <div class="avatar-ring"></div>
+            </div>
+            <div class="hero-text">
+                <div class="hero-name">Coldxoz</div>
+                <div class="hero-handle">@Coldxoz</div>
+                <div class="hero-badges">
+                    <span class="badge">🎮 Oyun</span>
+                    <span class="badge">✍️ Kurgu Yazarı</span>
+                    <span class="badge">🎬 Editör</span>
+                    <span class="badge">💻 Yazılımcı</span>
+                </div>
+            </div>
+            <a href="https://youtube.com/@coldxoz?sub_confirmation=1" target="_blank" class="subscribe-btn">
+                ▶ Abone Ol
+            </a>
+        </div>
+    </div>
 
+    <div class="modern-card section-top">
+        <h2>Son Videolar</h2>
+        <div class="videos-grid" id="videosGrid">
+            <p class="info-msg" style="grid-column:1/-1">📺 Yükleniyor...</p>
+        </div>
+        <a href="https://youtube.com/@coldxoz" target="_blank" class="yt-all-btn">▶ Tüm videoları YouTube'da gör</a>
+    </div>
+
+    <div class="modern-card">
+        <h2>Hakkımda</h2>
+        <div class="profile-bio">
+            Selam, ben Coldxoz. Dijital dünyada oyun editleri yapıyor, Wattpad'de karanlık fantezi kurgular yazıyor ve kendimi yazılım alanında geliştiriyorum. Python macerası başladı, projelere odaklanma vakti!
+        </div>
         <div class="stats-grid">
             <div class="stat-item">
                 <div class="stat-label">Yaş / Durum</div>
-                <div class="stat-value" id="gorunenYas">--</div>
+                <div class="stat-value">I am Good</div>
             </div>
             <div class="stat-item">
                 <div class="stat-label">Konum</div>
-                <div class="stat-value" id="gorunenKonum">--</div>
+                <div class="stat-value">Dünya</div>
             </div>
             <div class="stat-item">
                 <div class="stat-label">İlgi Alanları</div>
-                <div class="stat-value" id="gorunenIlgi">--</div>
+                <div class="stat-value">Real Madrid, Spor, Kurgu</div>
             </div>
             <div class="stat-item">
                 <div class="stat-label">Güncel Hedef</div>
-                <div class="stat-value" id="gorunenHedef">--</div>
+                <div class="stat-value">Yeni projeler</div>
             </div>
         </div>
-
-        <div class="admin-trigger" title="..." onclick="void(0)"></div>
     </div>
 
-    <!-- SOSYAL MEDYA -->
     <div class="modern-card">
         <h2>Ağlarım</h2>
         <div class="links-grid">
-            <a href="https://youtube.com/@coldxoz" target="_blank" class="social-link youtube-link">YouTube</a>
-            <a href="https://wattpad.com/" target="_blank" class="social-link wattpad-link">Wattpad</a>
-            <a href="https://tiktok.com" target="_blank" class="social-link tiktok-link">TikTok</a>
-            <a href="https://instagram.com" target="_blank" class="social-link instagram-link">Instagram</a>
+            <a href="https://youtube.com/@coldxoz" target="_blank" class="social-link youtube-link">▶ YouTube</a>
+            <a href="https://wattpad.com/zeron_v7" target="_blank" class="social-link wattpad-link">📖 Wattpad</a>
+            <a href="https://tiktok.com/@coldxoz" target="_blank" class="social-link tiktok-link">♪ TikTok</a>
+            <a href="https://instagram.com/coldox" target="_blank" class="social-link instagram-link">📷 Instagram</a>
         </div>
     </div>
 
-    <!-- YETENEKLER -->
     <div class="modern-card">
         <h2>Yeteneklerim & Gelişimim</h2>
         <div class="skills-grid">
             <div class="skill-item">
-                <div class="skill-header">
-                    <span>HTML & CSS & JS (Arayüz Tasarımı)</span>
-                    <span>%65</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 65%;"></div></div>
+                <div class="skill-header"><span>HTML & CSS & JS</span><span>%65</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div>
             </div>
             <div class="skill-item skill-python">
-                <div class="skill-header">
-                    <span>Python (Gujurly Bilim Merkezi Kursu)</span>
-                    <span>%30</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 30%;"></div></div>
+                <div class="skill-header"><span>Python</span><span>%30</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:30%"></div></div>
             </div>
             <div class="skill-item skill-wattpad">
-                <div class="skill-header">
-                    <span>Kurgu & Hikaye Yazarlığı</span>
-                    <span>%50</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 50%;"></div></div>
+                <div class="skill-header"><span>Kurgu & Hikaye Yazarlığı</span><span>%50</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
             </div>
             <div class="skill-item skill-edit">
-                <div class="skill-header">
-                    <span>Video Kurgu (DaVinci, CapCut)</span>
-                    <span>%70</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+                <div class="skill-header"><span>Video Kurgu (DaVinci, CapCut)</span><span>%70</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
             </div>
         </div>
     </div>
 
-    <!-- KİTAP VİTRİNİ -->
     <div class="modern-card">
         <h2>Kurgu Evrenim</h2>
-
         <div class="book-card">
-            <div class="book-title">Bozkırın Ritmi</div>
-            <div class="book-desc">Bozkırın acımasız kuralları arasında hayatta kalmaya çalışanların epik ve karanlık hikayesi. Kaderin ritmi herkes için farklı atıyor.</div>
-            <a href="https://wattpad.com/" target="_blank" class="read-btn">Wattpad'de Oku</a>
+            <div class="book-title">Gölgedeki Taht Nyxos | AÝAZ</div>
+            <div class="book-desc">"Ateş durulduğunda, sadece kan konuşur."<br><br>Dünyanın gördüğü en büyük kıyamet, gökyüzünü yırtan son Ejderha Lordu ile krallıkları karanlığa gömen kadim Nyxos Kraliçesi karşı karşıya geldiğinde başladı. Toprak küle dönüp, krallıkların sınırları yeniden çizilirken; bu devasa savaşın ve yükselen gölgelerin tam kalbinde, tarihin gidişatını değiştirecek bir sır gizliydi.<br><br>"Bir Vampire güven olmaz"</div>
+            <a href="https://www.wattpad.com/story/412057555-g%C3%B6lgedeki-taht-nyxos-a%C3%BDaz" target="_blank" class="read-btn">Wattpad'de Oku</a>
         </div>
-
         <div class="book-card">
             <div class="book-title">Küllerin Şövalyesi</div>
-            <div class="book-desc">Yıkılmış bir krallığın ardında kalan küllerden doğan bir şövalyenin intikam ve onur arayışı. Karanlık fantezi evrenine giriş yapın.</div>
-            <a href="https://wattpad.com/" target="_blank" class="read-btn">Wattpad'de Oku</a>
+            <div class="book-desc">Siriona Krallığı'nın neşeli pazarları bir gecede kana bulandığında, altı yaşındaki Garet her şeyini kaybetti. Ailesinin sıcak nefesi yerini is ve kan kokusuna bıraktı, çocukluğu ise çöplüğün karanlığında son buldu. Ama kader, onu Siriona'nın yıkıntıları arasında bırakmadı.</div>
+            <a href="https://www.wattpad.com/story/409037252-k%C3%BCllerin-%C5%9F%C3%B6valyesi-a%C3%BDaz" target="_blank" class="read-btn">Wattpad'de Oku</a>
         </div>
     </div>
 
-    <!-- OYUN ARAMA -->
     <input type="text" id="oyunArama" class="search-box"
         placeholder="🔍 Oyun ara..."
         oninput="oyunlariFiltrele(this.value)">
 
-    <!-- OYUN LİSTESİ -->
     <div class="modern-card">
         <span class="status-badge">● OYNADIĞIM & PAYLAŞTIĞIM OYUNLAR</span>
         <h2>İndirme Linkleri</h2>
         <div id="oyunListesi">
-            <span class="loading">Yükleniyor...</span>
+            <p class="info-msg">Yükleniyor...</p>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Zeron. Powered by GitHub Pages.</p>
+        <p>© 2026 Coldxoz. Powered by GitHub Pages.</p>
     </footer>
-
 </div>
 
 <script>
-    // Tüm veriyi tutan global değişken
-    let tumOyunlar = [];
+const AVATAR_URL = "foto/channels4_profile.jpg";  
+const BANNER_URL = "foto/channels4_banner.jpg";  
+const CHANNEL_ID = "UCHJObOFWdCSMVROmz6TlVjw";
+const RSS_PROXY  = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=" + CHANNEL_ID);
 
-    // Sayfa açılınca data.json'u çek
-    window.onload = function () {
-        veriYukle();
-    };
+let tumOyunlar = [];
 
-    async function veriYukle() {
-        try {
-            // data.json dosyasını aynı klasörden çek
-            // GitHub Pages'de bu otomatik çalışır
-            const res = await fetch('data.json');
+window.onload = () => {
+    gorsellerUygula();
+    oyunlariYukle();
+    videolariYukle();
+};
 
-            if (!res.ok) throw new Error('data.json bulunamadı');
-
-            const data = await res.json();
-
-            // Profili doldur
-            const p = data.profil;
-            document.getElementById('gorunenHakkimda').innerText = p.hakkimda;
-            document.getElementById('gorunenYas').innerText     = p.yas;
-            document.getElementById('gorunenKonum').innerText   = p.konum;
-            document.getElementById('gorunenIlgi').innerText    = p.ilgi;
-            document.getElementById('gorunenHedef').innerText   = p.hedef;
-
-            // Oyunları kaydet ve listele
-            tumOyunlar = data.oyunlar || [];
-            oyunlariListele(tumOyunlar);
-
-        } catch (err) {
-            document.getElementById('gorunenHakkimda').innerText =
-                '⚠️ Veri yüklenemedi. data.json dosyasının repoda olduğundan emin ol.';
-            document.getElementById('oyunListesi').innerHTML =
-                '<p style="color:#ef4444;">data.json yüklenemedi: ' + err.message + '</p>';
-        }
+function gorsellerUygula() {
+    if (AVATAR_URL) {
+        const avatarEl = document.getElementById('avatarEl');
+        if(avatarEl) avatarEl.innerHTML = `<img src="${AVATAR_URL}" alt="avatar" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">`;
     }
+    if (BANNER_URL) {
+        const heroBanner = document.getElementById('heroBanner');
+        if(heroBanner) heroBanner.style.backgroundImage = `url('${BANNER_URL}')`;
+    }
+}
 
-    function oyunlariListele(liste) {
-        const div = document.getElementById('oyunListesi');
-        div.innerHTML = '';
+async function oyunlariYukle() {
+    const div = document.getElementById('oyunListesi');
+    if (!div) return;
 
-        if (!liste || liste.length === 0) {
-            div.innerHTML = '<p style="color:#6b7280;">Henüz oyun eklenmedi.</p>';
-            return;
+    try {
+        const res = await fetch('oyunlar.json');
+        if (!res.ok) throw new Error('404');
+        const liste = await res.json();
+
+        tumOyunlar = liste.oyunlar || []; 
+        oyunlariListele(tumOyunlar);
+    } catch(e) {
+        const yerel = location.protocol === 'file:';
+        div.innerHTML = yerel
+            ? `<p class="info-msg">⚠️ Dosyayı direkt açtığın için oyunlar görünmüyor.<br>
+               GitHub Pages'e yükleyince <b>oyunlar.json</b>'dan otomatik gelir.</p>`
+            : `<p class="info-msg">⚠️ oyunlar.json bulunamadı. Lütfen JSON dosyasının ana dizinde olduğundan emin ol.</p>`;
+    }
+}
+
+function oyunlariListele(liste) {
+    const div = document.getElementById('oyunListesi');
+    if (!div) return;
+
+    if (!liste || liste.length === 0) {
+        div.innerHTML = '<p class="info-msg">Şu an için listelenecek oyun bulunmuyor.</p>';
+        return;
+    }
+    
+    div.innerHTML = liste.map(o => `
+        <div class="game-item">
+            <h3>${o.ad}</h3>
+            <a href="${o.link}" target="_blank" class="download-btn">⬇ İndir</a>
+        </div>`).join('');
+}
+
+function oyunlariFiltrele(q) {
+    const f = q.toLowerCase().trim();
+    oyunlariListele(f ? tumOyunlar.filter(o => o.ad.toLowerCase().includes(f)) : tumOyunlar);
+}
+
+async function videolariYukle() {
+    const grid = document.getElementById('videosGrid');
+    if (!grid) return;
+
+    try {
+        const res  = await fetch(RSS_PROXY);
+        const data = await res.json();
+        if (data.status !== 'ok' || !data.items?.length) throw new Error('Boş');
+
+        // Eğer manuel AVATAR_URL atanmamışsa YouTube profil fotosunu çek
+        const avatarEl = document.getElementById('avatarEl');
+        if (avatarEl && !AVATAR_URL && data.feed?.image) {
+            avatarEl.innerHTML = `<img src="${data.feed.image}" alt="avatar" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">`;
         }
 
-        liste.forEach(oyun => {
-            div.innerHTML += `
-                <div class="game-item">
-                    <div><h3 style="font-size:1.05rem;">${oyun.ad}</h3></div>
-                    <a href="${oyun.link}" target="_blank" class="download-btn">İndir</a>
+        grid.innerHTML = '';
+        data.items.slice(0, 6).forEach(v => {
+            const vid = v.link.match(/(?:v=|\/v\/|embed\/|youtu\.be\/)([^&\s?#]+)/)?.[1] || '';
+            const thumb = vid ? `https://i.ytimg.com/vi/${vid}/mqdefault.jpg` : '';
+            const tarih = new Date(v.pubDate).toLocaleDateString('tr-TR', {
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric'
+            });
+
+            grid.innerHTML += `
+            <a href="${v.link}" target="_blank" class="video-card">
+                <div class="video-thumb">
+                    ${thumb
+                        ? `<img src="${thumb}" alt="${v.title}" loading="lazy">`
+                        : `<div style="height:100%;background:#1a1a1a;display:flex;align-items:center;justify-content:center;color:#444;font-size:2rem">▶</div>`}
+                    <div class="play-overlay"><div class="play-icon">▶</div></div>
                 </div>
-            `;
+                <div class="video-info">
+                    <div class="video-title">${v.title}</div>
+                    <div class="video-date">${tarih}</div>
+                </div>
+            </a>`;
         });
+    } catch (e) {
+        const yerel = location.protocol === 'file:';
+        grid.innerHTML = `<p class="info-msg" style="grid-column:1/-1">
+            ${yerel
+                ? '⚠️ Videolar GitHub Pages\'e yükleyince otomatik gelir.'
+                : '📺 Videolar yüklenemedi. YouTube API/RSS gecikmesi olabilir.'}
+        </p>`;
     }
-
-    function oyunlariFiltrele(aramaMetni) {
-        const filtre = aramaMetni.toLowerCase().trim();
-        if (!filtre) {
-            oyunlariListele(tumOyunlar);
-            return;
-        }
-        const sonuclar = tumOyunlar.filter(o =>
-            o.ad.toLowerCase().includes(filtre)
-        );
-        oyunlariListele(sonuclar);
-    }
+}
 </script>
 </body>
 </html>
