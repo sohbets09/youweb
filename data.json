@@ -7,7 +7,15 @@
     "hedef": "Yeni projelere odaklanmak."
   },
   "oyunlar": [
-    { "id": 1, "ad": "Minecraft Java", "http://games.unite-gaming.com/minecraft_installer.exe": "https://example.com" }
-    { "id": 1, "ad": "Minecraft Dungeons", "https://games.unite-gaming.com/games2/Minecraft-Dungeons-by-Igruha.7z": "https://example.com" }
+    { 
+      "id": 1, 
+      "ad": "Minecraft Java", 
+      "link": "http://games.unite-gaming.com/minecraft_installer.exe" 
+    },
+    { 
+      "id": 2, 
+      "ad": "Minecraft Dungeons", 
+      "link": "https://games.unite-gaming.com/games2/Minecraft-Dungeons-by-Igruha.7z" 
+    }
   ]
 }
